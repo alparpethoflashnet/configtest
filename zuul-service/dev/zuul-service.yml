@@ -1,8 +1,11 @@
 server:
   port: 12000
 
+alpar=33
+
 spring:  
-  application:    name: zuul-service-alpar
+  application:
+    name: zuul-service-alpar
   http:
     log-request-details: true
   boot:
@@ -14,7 +17,8 @@ spring:
                 
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie,Authorization
-  routes:    test:
+  routes:
+    test:
       path: /data/**
       url: http://localhost:8080
     index:
@@ -24,13 +28,14 @@ zuul:
 security:
   oauth2:    
     resource:
-      jwk:        key-set-uri: https://integrator.flashnet.ro:9443/oauth2/jwks
+      jwk:
+        key-set-uri: https://integrator.flashnet.ro:9443/oauth2/jwks
       userInfoUri: https://integrator.flashnet.ro:9443/oauth2/userinfo
       token-info-uri: https://integrator.flashnet.ro:9443/oauth2/introspect
       
 eureka:
   client:
-    fetchRegistry: false
+    fetchRegistry: true
     healthcheck:
       enabled: true
   instance:
