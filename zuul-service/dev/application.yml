@@ -1,6 +1,8 @@
 server:
   port: 12000
 
+alpar=33
+
 spring:  
   application:
     name: zuul-service-alpar
