@@ -1,7 +1,7 @@
 server:
   port: 12000
 
-alpar=33
+alpar:33
 
 spring:  
   application:
